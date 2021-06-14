@@ -6,15 +6,15 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <!--a-scene会创建一个AR环境-->
-    <a-scene embedded arjs>
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
         <!--a-marker是在相机中想要识别模型的标记-->
-        <a-marker type='pattern' url='./pattern-marker.patt'>
-            <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
-          <a-entity
-            scale="0.001 0.001 0.001"
+        <a-marker type="pattern" url="./pattern-marker.patt">
+        <a-entity   position="0 0 0" 
+                    rotation="0 0 0"
+                    scale="0.01 0.01 0.01"
             gltf-model="./terrain.gltf"
-            ></a-entity>
-        </a-marker>
+        </a-entity>
+    </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
